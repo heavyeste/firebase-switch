@@ -4,12 +4,32 @@
   "description": "Tools to switch firebase env",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon",
+    "build": "rimraf ./build && tsc",
+    "start": "npm run build && node build/index.js",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install",
+    "refresh-win": "rmdir /s node_modules && del package-lock.json && npm install"
   },
   "author": "Esteban Lombardo",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^13.13.4",
+    "nodemon": "^2.0.3",
+    "rimraf": "^3.0.2",
+    "ts-node": "^8.9.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@types/inquirer": "^6.5.0",
+    "chalk": "^4.0.0",
+    "clear": "^0.1.0",
+    "commander": "^5.1.0",
+    "figlet": "^1.4.0",
+    "inquirer": "^7.1.0",
+    "ncp": "^2.0.0",
+    "ora": "^4.0.4",
+    "path": "^0.12.7",
+    "yargs": "^15.3.1"
   }
 }
