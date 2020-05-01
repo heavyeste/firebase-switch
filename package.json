@@ -1,8 +1,11 @@
 {
   "name": "firebase-switch",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "Tools to switch firebase env",
   "main": "index.js",
+  "bin": {
+    "firebase-switch": "./build/index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "nodemon",
